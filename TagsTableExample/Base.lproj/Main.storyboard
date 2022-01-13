@@ -8,64 +8,60 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tester View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="TesterViewController" customModule="TagsTableExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ybB-M6-j6l"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1136.25" y="112.5"/>
-        </scene>
-        <!--View Controller-->
+        <!--My Label Only View Controller-->
         <scene sceneID="sYA-sF-kg5">
             <objects>
-                <viewController id="BkY-55-ipA" customClass="ViewController" customModule="TagsTableExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BkY-55-ipA" customClass="MyLabelOnlyViewController" customModule="TagsTableExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pgl-oK-RQO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Dr9-OL-usl" customClass="RangeSlider" customModule="TagsTableExample" customModuleProvider="target">
-                                <rect key="frame" x="20" y="84" width="280" height="160"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="0M5-AU-2yj"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASX-0K-0MA" customClass="MyLabelView" customModule="TagsTableExample" customModuleProvider="target">
-                                <rect key="frame" x="20" y="264" width="280" height="128"/>
+                                <rect key="frame" x="20" y="139" width="280" height="128"/>
                                 <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="2TJ-BY-wZF"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ2-aw-Im5">
+                                <rect key="frame" x="139.5" y="64" width="41.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nBe-Dy-Lc9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap anywhere to call .reload() on the MyLabelView custom view." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtF-RS-hlX">
+                                <rect key="frame" x="20" y="419" width="280" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ReA-CF-vZi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Dr9-OL-usl" firstAttribute="leading" secondItem="ReA-CF-vZi" secondAttribute="leading" constant="20" id="3rJ-Bg-JCJ"/>
+                            <constraint firstItem="ReA-CF-vZi" firstAttribute="bottom" secondItem="GtF-RS-hlX" secondAttribute="bottom" constant="20" id="5JW-Ub-AMt"/>
+                            <constraint firstItem="GtF-RS-hlX" firstAttribute="leading" secondItem="ReA-CF-vZi" secondAttribute="leading" constant="20" id="5gU-Ic-RjE"/>
                             <constraint firstItem="ASX-0K-0MA" firstAttribute="leading" secondItem="ReA-CF-vZi" secondAttribute="leading" constant="20" id="6MJ-5M-XJW"/>
-                            <constraint firstItem="Dr9-OL-usl" firstAttribute="top" secondItem="ReA-CF-vZi" secondAttribute="top" constant="40" id="PV2-ol-gHM"/>
                             <constraint firstItem="ReA-CF-vZi" firstAttribute="trailing" secondItem="ASX-0K-0MA" secondAttribute="trailing" constant="20" id="Svr-yz-bUx"/>
-                            <constraint firstItem="ASX-0K-0MA" firstAttribute="top" secondItem="Dr9-OL-usl" secondAttribute="bottom" constant="20" id="eAb-Z9-Gl0"/>
-                            <constraint firstItem="ReA-CF-vZi" firstAttribute="trailing" secondItem="Dr9-OL-usl" secondAttribute="trailing" constant="20" id="zS1-Gh-NL0"/>
+                            <constraint firstItem="ReA-CF-vZi" firstAttribute="trailing" secondItem="GtF-RS-hlX" secondAttribute="trailing" constant="20" id="WfK-GI-ffU"/>
+                            <constraint firstItem="eJ2-aw-Im5" firstAttribute="top" secondItem="ReA-CF-vZi" secondAttribute="top" constant="20" id="aHg-E5-jVK"/>
+                            <constraint firstItem="ASX-0K-0MA" firstAttribute="top" secondItem="eJ2-aw-Im5" secondAttribute="bottom" constant="25" id="e54-AB-Slc"/>
+                            <constraint firstItem="eJ2-aw-Im5" firstAttribute="centerX" secondItem="ASX-0K-0MA" secondAttribute="centerX" id="iYR-Ww-Q0N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pQV-IT-cwK"/>
                     <connections>
+                        <outlet property="infoLabel" destination="eJ2-aw-Im5" id="Qkg-Zy-pdY"/>
+                        <outlet property="mlvHeightConstraint" destination="2TJ-BY-wZF" id="3rI-Xx-dWF"/>
                         <outlet property="myLabelView" destination="ASX-0K-0MA" id="upu-FL-jxd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eeu-nj-Wpl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136.25" y="825"/>
+            <point key="canvasLocation" x="1254" y="49"/>
         </scene>
         <!--My Label View Table View Controller-->
         <scene sceneID="J1i-Ar-dRy">
@@ -75,16 +71,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Pej-sS-MyI">
-                                <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pej-sS-MyI" id="u2J-Vm-U9p">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="vIO-ez-0pa" id="UNv-N2-gMd"/>
                             <outlet property="delegate" destination="vIO-ez-0pa" id="oyM-Xm-aCI"/>
@@ -94,12 +80,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NiU-ON-5CA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="1524"/>
+            <point key="canvasLocation" x="1256" y="794"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="D6H-Kn-zwx">
             <objects>
-                <viewController id="2mm-S9-2Ya" sceneMemberID="viewController">
+                <viewController id="2mm-S9-2Ya" customClass="MenuViewController" customModule="TagsTableExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eDn-zM-qt3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,28 +93,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ZEP-LX-6Dn">
                                 <rect key="frame" x="79.5" y="161.5" width="161" height="157"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h0-Lk-4uY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL9-T5-mIC">
                                         <rect key="frame" x="0.0" y="0.0" width="161" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="TagsTable"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="i9x-Rv-Jqt"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL9-T5-mIC">
-                                        <rect key="frame" x="0.0" y="63" width="161" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Slider Only"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="My Label View Only"/>
                                         <connections>
                                             <segue destination="BkY-55-ipA" kind="show" id="3Io-Er-U60"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhC-jb-2Ov">
-                                        <rect key="frame" x="0.0" y="126" width="161" height="31"/>
+                                        <rect key="frame" x="0.0" y="63" width="161" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="My Label View in Cell"/>
                                         <connections>
                                             <segue destination="vIO-ez-0pa" kind="show" id="pVO-QR-glb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h0-Lk-4uY">
+                                        <rect key="frame" x="0.0" y="126" width="161" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="TagsTable"/>
+                                        <connections>
+                                            <action selector="showTagsTableController:" destination="2mm-S9-2Ya" eventType="touchUpInside" id="m24-SF-MMW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -153,7 +139,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hx5-2j-mcz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nWg-bw-z8n">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -169,9 +155,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

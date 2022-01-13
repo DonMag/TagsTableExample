@@ -17,27 +17,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="208"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aoq-cc-80O" customClass="MyLabelView" customModule="TagsTableExample" customModuleProvider="target">
-                        <rect key="frame" x="16" y="26" width="168" height="128"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aoq-cc-80O" customClass="MyLabelView" customModule="TagsTableExample" customModuleProvider="target">
+                        <rect key="frame" x="16" y="67" width="168" height="60"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="ZGM-Bc-3SB"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh8-H9-kqs">
+                        <rect key="frame" x="16" y="11" width="168" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="hhY-Xf-uxS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="gh8-H9-kqs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="37O-sL-JYb"/>
+                    <constraint firstItem="gh8-H9-kqs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="7nc-fl-neT"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Aoq-cc-80O" secondAttribute="bottom" id="Hx6-hk-7mv"/>
-                    <constraint firstItem="Aoq-cc-80O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Kpy-nO-wlk"/>
+                    <constraint firstItem="Aoq-cc-80O" firstAttribute="top" secondItem="gh8-H9-kqs" secondAttribute="bottom" constant="8" id="Oif-YB-bZB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gh8-H9-kqs" secondAttribute="trailing" id="PhI-lb-hW9"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Aoq-cc-80O" secondAttribute="trailing" id="V42-Pr-dAk"/>
                     <constraint firstItem="Aoq-cc-80O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hNf-eM-mJG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="infoLabel" destination="gh8-H9-kqs" id="yuO-EO-i0g"/>
                 <outlet property="mlvHeightConstraint" destination="ZGM-Bc-3SB" id="FvW-7r-R0z"/>
                 <outlet property="myLabelView" destination="Aoq-cc-80O" id="zmL-Sn-2Yl"/>
             </connections>
-            <point key="canvasLocation" x="358.69565217391306" y="70.3125"/>
+            <point key="canvasLocation" x="105" y="72"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -10,6 +10,11 @@ import UIKit
 
 class TesterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
+	// "callback" closure to tell the menu view controller to update the data
+	public var tagStateChanged: ((String, String, Bool) -> ())?
+
+	// this example is not using these...
+	/*
 	var activeSensorFilters: [FilterSensorSize] = []
 	var activeLensMountFilters: [FilterLensMountCamera] = []
 	var activeResolutionFilters: [FilterResolution] = []
@@ -19,9 +24,11 @@ class TesterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	var activeNDFilters: [FilterND] = []
 	var activeCompressionFilters: [FilterCompression] = []
 	var activeNetflixFilters: [FilterNetflix] = []
+	*/
 	
 	// let's use dictionaries to manage the
 	//	Available and Active (selected) filters
+	// these will be set by the Menu controller
 	var availableFilters: [String : [String]] = [:]
 	var activeFilters: [String : [String]] = [:]
 	
@@ -29,51 +36,8 @@ class TesterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		// map all the Filters and sub-items into the availableFilters dictionary
-		CameraFilter.allCases.forEach { v in
-			
-			switch v {
-			case .SensorSize:
-				availableFilters[v.rawValue] = FilterSensorSize.allCases.map({$0.rawValue})
-				
-			case .LensMount:
-				availableFilters[v.rawValue] = FilterLensMountCamera.allCases.map({$0.rawValue})
-				
-			case .Resolution:
-				availableFilters[v.rawValue] = FilterResolution.allCases.map({$0.rawValue})
-				
-			case .SlowMotion:
-				availableFilters[v.rawValue] = []
-				
-			case .Weight:
-				availableFilters[v.rawValue] = []
-				
-			case .Raw:
-				availableFilters[v.rawValue] = FilterRaw.allCases.map({$0.rawValue})
-				
-			case .BitDepth:
-				availableFilters[v.rawValue] = FilterBitDepth.allCases.map({$0.rawValue})
-				
-			case .Chroma:
-				availableFilters[v.rawValue] = FilterChroma.allCases.map({$0.rawValue})
-				
-			case .InternalND:
-				availableFilters[v.rawValue] = FilterND.allCases.map({$0.rawValue})
-				
-			case .Compression:
-				availableFilters[v.rawValue] = FilterCompression.allCases.map({$0.rawValue})
-				
-			case .Netflix:
-				availableFilters[v.rawValue] = FilterNetflix.allCases.map({$0.rawValue})
-				
-			}
 
-			// presumably, Active (selected) states for the Filters in each
-			//	category will be saved for persistance or used elsewhere in the app
-			// for now, we initialize the Active array for each filter to empty
-			activeFilters[v.rawValue] = []
-		}
+		view.backgroundColor = .gray
 		
 		tableView = UITableView()
 		tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -123,12 +87,15 @@ class TesterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		cell.fillData(available: available, active: active)
 		
 		cell.tagStateChanged = { [weak self] c, s, b in
-			guard let self = self else { return }
+			guard let self = self,
+				  let thisCell = c as? FilterTagsTableViewCell
+			else { return }
 			if b {
-				self.activeFilters[cell.filterCategory]?.append(s)
+				self.activeFilters[thisCell.filterCategory]?.append(s)
 			} else {
-				self.activeFilters[cell.filterCategory]?.removeAll(where: {$0 == s})
+				self.activeFilters[thisCell.filterCategory]?.removeAll(where: {$0 == s})
 			}
+			self.tagStateChanged?(thisCell.filterCategory, s, b)
 		}
 		
 		return cell

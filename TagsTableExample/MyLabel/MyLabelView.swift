@@ -15,13 +15,14 @@ class MyLabelView: UIView {
 	public var myHeight: CGFloat = 0
 	
 	public func reloadData() {
-		print(bounds.width)
 		if bounds.width < 300 {
 			myHeight = 60
+		} else if bounds.width < 400 {
+			myHeight = 120
 		} else {
-			myHeight = 240
+			myHeight = 320
 		}
-		theLabel.text = "bounds width: \(bounds.width)"
+		theLabel.text = "bounds width: \(bounds.width)\nset myHeight to \(myHeight)"
 	}
 
 	//  init used if the view is created programmatically

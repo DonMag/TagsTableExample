@@ -20,11 +20,6 @@ class FilterTagsTableViewCell: UITableViewCell {
 		}
 	}
 
-	// we'll track the Active (selected) tags
-	//	as well as sending the tag states back to our
-	//	controller via the "callback" closure
-	private var activeTags: [String] = []
-	
 	public var insetColor: UIColor = .blue
 	public var textColor: UIColor = .white
 
@@ -90,11 +85,6 @@ class FilterTagsTableViewCell: UITableViewCell {
 		
 		tagsView.tagStateChanged = { [weak self] str, b in
 			guard let self = self else { return }
-			if b {
-				self.activeTags.append(str)
-			} else {
-				self.activeTags.removeAll(where: {$0 == str})
-			}
 			// tagsView told us a tag state changed (tag was tapped)
 			//	so "callback" to our controller
 			self.tagStateChanged?(self, str, b)

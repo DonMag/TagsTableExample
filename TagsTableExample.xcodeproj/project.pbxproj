@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC67F560278E18AE0014BEEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F55F278E18AE0014BEEC /* AppDelegate.swift */; };
 		FC67F562278E18AE0014BEEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F561278E18AE0014BEEC /* SceneDelegate.swift */; };
-		FC67F564278E18AE0014BEEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F563278E18AE0014BEEC /* ViewController.swift */; };
+		FC67F564278E18AE0014BEEC /* MyLabelOnlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F563278E18AE0014BEEC /* MyLabelOnlyViewController.swift */; };
 		FC67F567278E18AE0014BEEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC67F565278E18AE0014BEEC /* Main.storyboard */; };
 		FC67F569278E18B00014BEEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC67F568278E18B00014BEEC /* Assets.xcassets */; };
 		FC67F56C278E18B00014BEEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC67F56A278E18B00014BEEC /* LaunchScreen.storyboard */; };
@@ -18,23 +18,19 @@
 		FC67F579278E19430014BEEC /* TesterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F578278E19430014BEEC /* TesterViewController.swift */; };
 		FC67F57C278E19BE0014BEEC /* TagLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F57B278E19BE0014BEEC /* TagLabelsView.swift */; };
 		FC67F57E278E1A350014BEEC /* FilterTagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F57D278E1A350014BEEC /* FilterTagsTableViewCell.swift */; };
-		FC67F58D279075A80014BEEC /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F58B279075A70014BEEC /* RangeSlider.swift */; };
-		FC67F58E279075A80014BEEC /* RangeSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC67F58C279075A70014BEEC /* RangeSlider.xib */; };
-		FC67F591279078200014BEEC /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F58F279078200014BEEC /* SliderTableViewCell.swift */; };
-		FC67F592279078200014BEEC /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC67F590279078200014BEEC /* SliderTableViewCell.xib */; };
-		FC67F594279078AE0014BEEC /* SliderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F593279078AE0014BEEC /* SliderTableViewController.swift */; };
 		FC67F597279086BC0014BEEC /* MyLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F596279086BC0014BEEC /* MyLabelView.swift */; };
 		FC67F599279086D10014BEEC /* MyLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC67F598279086D10014BEEC /* MyLabelView.xib */; };
 		FC67F59C2790891D0014BEEC /* MyLabelViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F59A2790891D0014BEEC /* MyLabelViewTableViewCell.swift */; };
 		FC67F59D2790891D0014BEEC /* MyLabelViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC67F59B2790891D0014BEEC /* MyLabelViewTableViewCell.xib */; };
 		FC67F59F279089ED0014BEEC /* MyLabelViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F59E279089ED0014BEEC /* MyLabelViewTableViewController.swift */; };
+		FC67F5A62790AE890014BEEC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F5A52790AE890014BEEC /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC67F55C278E18AE0014BEEC /* TagsTableExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagsTableExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC67F55F278E18AE0014BEEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC67F561278E18AE0014BEEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC67F563278E18AE0014BEEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC67F563278E18AE0014BEEC /* MyLabelOnlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabelOnlyViewController.swift; sourceTree = "<group>"; };
 		FC67F566278E18AE0014BEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC67F568278E18B00014BEEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC67F56B278E18B00014BEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,16 +40,12 @@
 		FC67F578278E19430014BEEC /* TesterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesterViewController.swift; sourceTree = "<group>"; };
 		FC67F57B278E19BE0014BEEC /* TagLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabelsView.swift; sourceTree = "<group>"; };
 		FC67F57D278E1A350014BEEC /* FilterTagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTagsTableViewCell.swift; sourceTree = "<group>"; };
-		FC67F58B279075A70014BEEC /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
-		FC67F58C279075A70014BEEC /* RangeSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RangeSlider.xib; sourceTree = "<group>"; };
-		FC67F58F279078200014BEEC /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
-		FC67F590279078200014BEEC /* SliderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
-		FC67F593279078AE0014BEEC /* SliderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewController.swift; sourceTree = "<group>"; };
 		FC67F596279086BC0014BEEC /* MyLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabelView.swift; sourceTree = "<group>"; };
 		FC67F598279086D10014BEEC /* MyLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLabelView.xib; sourceTree = "<group>"; };
 		FC67F59A2790891D0014BEEC /* MyLabelViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabelViewTableViewCell.swift; sourceTree = "<group>"; };
 		FC67F59B2790891D0014BEEC /* MyLabelViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLabelViewTableViewCell.xib; sourceTree = "<group>"; };
 		FC67F59E279089ED0014BEEC /* MyLabelViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabelViewTableViewController.swift; sourceTree = "<group>"; };
+		FC67F5A52790AE890014BEEC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +78,12 @@
 		FC67F55E278E18AE0014BEEC /* TagsTableExample */ = {
 			isa = PBXGroup;
 			children = (
+				FC67F5A427909B8F0014BEEC /* Controllers */,
 				FC67F595279086910014BEEC /* MyLabel */,
-				FC67F58A279075A70014BEEC /* Slider */,
 				FC67F573278E18C30014BEEC /* GrayHour */,
 				FC67F55F278E18AE0014BEEC /* AppDelegate.swift */,
 				FC67F561278E18AE0014BEEC /* SceneDelegate.swift */,
-				FC67F563278E18AE0014BEEC /* ViewController.swift */,
-				FC67F57A278E19800014BEEC /* Classes */,
+				FC67F57A278E19800014BEEC /* TagLabelsView */,
 				FC67F565278E18AE0014BEEC /* Main.storyboard */,
 				FC67F568278E18B00014BEEC /* Assets.xcassets */,
 				FC67F56A278E18B00014BEEC /* LaunchScreen.storyboard */,
@@ -110,26 +101,13 @@
 			path = GrayHour;
 			sourceTree = "<group>";
 		};
-		FC67F57A278E19800014BEEC /* Classes */ = {
+		FC67F57A278E19800014BEEC /* TagLabelsView */ = {
 			isa = PBXGroup;
 			children = (
-				FC67F578278E19430014BEEC /* TesterViewController.swift */,
 				FC67F57B278E19BE0014BEEC /* TagLabelsView.swift */,
 				FC67F57D278E1A350014BEEC /* FilterTagsTableViewCell.swift */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		FC67F58A279075A70014BEEC /* Slider */ = {
-			isa = PBXGroup;
-			children = (
-				FC67F58B279075A70014BEEC /* RangeSlider.swift */,
-				FC67F58C279075A70014BEEC /* RangeSlider.xib */,
-				FC67F58F279078200014BEEC /* SliderTableViewCell.swift */,
-				FC67F590279078200014BEEC /* SliderTableViewCell.xib */,
-				FC67F593279078AE0014BEEC /* SliderTableViewController.swift */,
-			);
-			path = Slider;
+			path = TagLabelsView;
 			sourceTree = "<group>";
 		};
 		FC67F595279086910014BEEC /* MyLabel */ = {
@@ -139,9 +117,19 @@
 				FC67F598279086D10014BEEC /* MyLabelView.xib */,
 				FC67F59A2790891D0014BEEC /* MyLabelViewTableViewCell.swift */,
 				FC67F59B2790891D0014BEEC /* MyLabelViewTableViewCell.xib */,
-				FC67F59E279089ED0014BEEC /* MyLabelViewTableViewController.swift */,
 			);
 			path = MyLabel;
+			sourceTree = "<group>";
+		};
+		FC67F5A427909B8F0014BEEC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC67F563278E18AE0014BEEC /* MyLabelOnlyViewController.swift */,
+				FC67F5A52790AE890014BEEC /* MenuViewController.swift */,
+				FC67F59E279089ED0014BEEC /* MyLabelViewTableViewController.swift */,
+				FC67F578278E19430014BEEC /* TesterViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,10 +190,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC67F58E279075A80014BEEC /* RangeSlider.xib in Resources */,
 				FC67F599279086D10014BEEC /* MyLabelView.xib in Resources */,
 				FC67F59D2790891D0014BEEC /* MyLabelViewTableViewCell.xib in Resources */,
-				FC67F592279078200014BEEC /* SliderTableViewCell.xib in Resources */,
 				FC67F56C278E18B00014BEEC /* LaunchScreen.storyboard in Resources */,
 				FC67F569278E18B00014BEEC /* Assets.xcassets in Resources */,
 				FC67F567278E18AE0014BEEC /* Main.storyboard in Resources */,
@@ -220,15 +206,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC67F57E278E1A350014BEEC /* FilterTagsTableViewCell.swift in Sources */,
-				FC67F564278E18AE0014BEEC /* ViewController.swift in Sources */,
+				FC67F564278E18AE0014BEEC /* MyLabelOnlyViewController.swift in Sources */,
 				FC67F577278E18D80014BEEC /* Colors.swift in Sources */,
 				FC67F59C2790891D0014BEEC /* MyLabelViewTableViewCell.swift in Sources */,
 				FC67F560278E18AE0014BEEC /* AppDelegate.swift in Sources */,
-				FC67F591279078200014BEEC /* SliderTableViewCell.swift in Sources */,
-				FC67F58D279075A80014BEEC /* RangeSlider.swift in Sources */,
-				FC67F594279078AE0014BEEC /* SliderTableViewController.swift in Sources */,
 				FC67F575278E18D30014BEEC /* Enums.swift in Sources */,
 				FC67F562278E18AE0014BEEC /* SceneDelegate.swift in Sources */,
+				FC67F5A62790AE890014BEEC /* MenuViewController.swift in Sources */,
 				FC67F597279086BC0014BEEC /* MyLabelView.swift in Sources */,
 				FC67F579278E19430014BEEC /* TesterViewController.swift in Sources */,
 				FC67F57C278E19BE0014BEEC /* TagLabelsView.swift in Sources */,
