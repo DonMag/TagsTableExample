@@ -24,6 +24,9 @@
 		FC67F59D2790891D0014BEEC /* MyLabelViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC67F59B2790891D0014BEEC /* MyLabelViewTableViewCell.xib */; };
 		FC67F59F279089ED0014BEEC /* MyLabelViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F59E279089ED0014BEEC /* MyLabelViewTableViewController.swift */; };
 		FC67F5A62790AE890014BEEC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F5A52790AE890014BEEC /* MenuViewController.swift */; };
+		FC67F5AA2791CDB00014BEEC /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F5A82791CDB00014BEEC /* DemoTableViewCell.swift */; };
+		FC67F5AB2791CDB00014BEEC /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC67F5A92791CDB00014BEEC /* DemoTableViewCell.xib */; };
+		FC67F5AD2791CDCD0014BEEC /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC67F5AC2791CDCD0014BEEC /* DemoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		FC67F59B2790891D0014BEEC /* MyLabelViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyLabelViewTableViewCell.xib; sourceTree = "<group>"; };
 		FC67F59E279089ED0014BEEC /* MyLabelViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabelViewTableViewController.swift; sourceTree = "<group>"; };
 		FC67F5A52790AE890014BEEC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FC67F5A82791CDB00014BEEC /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
+		FC67F5A92791CDB00014BEEC /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
+		FC67F5AC2791CDCD0014BEEC /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 		FC67F55E278E18AE0014BEEC /* TagsTableExample */ = {
 			isa = PBXGroup;
 			children = (
+				FC67F5A72791CD8C0014BEEC /* XIBDemo */,
 				FC67F5A427909B8F0014BEEC /* Controllers */,
 				FC67F595279086910014BEEC /* MyLabel */,
 				FC67F573278E18C30014BEEC /* GrayHour */,
@@ -124,12 +131,22 @@
 		FC67F5A427909B8F0014BEEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC67F563278E18AE0014BEEC /* MyLabelOnlyViewController.swift */,
 				FC67F5A52790AE890014BEEC /* MenuViewController.swift */,
+				FC67F563278E18AE0014BEEC /* MyLabelOnlyViewController.swift */,
 				FC67F59E279089ED0014BEEC /* MyLabelViewTableViewController.swift */,
 				FC67F578278E19430014BEEC /* TesterViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC67F5A72791CD8C0014BEEC /* XIBDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FC67F5A82791CDB00014BEEC /* DemoTableViewCell.swift */,
+				FC67F5A92791CDB00014BEEC /* DemoTableViewCell.xib */,
+				FC67F5AC2791CDCD0014BEEC /* DemoTableViewController.swift */,
+			);
+			path = XIBDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC67F5AB2791CDB00014BEEC /* DemoTableViewCell.xib in Resources */,
 				FC67F599279086D10014BEEC /* MyLabelView.xib in Resources */,
 				FC67F59D2790891D0014BEEC /* MyLabelViewTableViewCell.xib in Resources */,
 				FC67F56C278E18B00014BEEC /* LaunchScreen.storyboard in Resources */,
@@ -211,11 +229,13 @@
 				FC67F59C2790891D0014BEEC /* MyLabelViewTableViewCell.swift in Sources */,
 				FC67F560278E18AE0014BEEC /* AppDelegate.swift in Sources */,
 				FC67F575278E18D30014BEEC /* Enums.swift in Sources */,
+				FC67F5AD2791CDCD0014BEEC /* DemoTableViewController.swift in Sources */,
 				FC67F562278E18AE0014BEEC /* SceneDelegate.swift in Sources */,
 				FC67F5A62790AE890014BEEC /* MenuViewController.swift in Sources */,
 				FC67F597279086BC0014BEEC /* MyLabelView.swift in Sources */,
 				FC67F579278E19430014BEEC /* TesterViewController.swift in Sources */,
 				FC67F57C278E19BE0014BEEC /* TagLabelsView.swift in Sources */,
+				FC67F5AA2791CDB00014BEEC /* DemoTableViewCell.swift in Sources */,
 				FC67F59F279089ED0014BEEC /* MyLabelViewTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

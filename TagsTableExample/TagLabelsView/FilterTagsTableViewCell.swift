@@ -45,6 +45,8 @@ class FilterTagsTableViewCell: UITableViewCell {
 	}
 	
 	func commonInit() -> Void {
+		
+		contentView.clipsToBounds = true
 
 		let stackView: UIStackView = {
 			let v = UIStackView()

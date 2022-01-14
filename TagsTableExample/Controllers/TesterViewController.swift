@@ -31,7 +31,11 @@ class TesterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 	// these will be set by the Menu controller
 	var availableFilters: [String : [String]] = [:]
 	var activeFilters: [String : [String]] = [:]
-	
+
+	var rowOneAvailableA: [String] = []
+	var rowOneAvailableB: [String] = []
+	var bTest: Bool = false
+
 	private var tableView: UITableView!
 	
 	override func viewDidLoad() {
@@ -54,6 +58,11 @@ class TesterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 		tableView.register(FilterTagsTableViewCell.self, forCellReuseIdentifier: FilterTagsTableViewCell.identifier)
 		tableView.dataSource = self
 		tableView.delegate = self
+		
+		if let av = availableFilters[CameraFilter.LensMount.rawValue] {
+			rowOneAvailableA = av
+			rowOneAvailableB = Array(av[1...2])
+		}
 	}
 	
 	func calculateFilterResults() {
@@ -84,7 +93,14 @@ class TesterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 			fatalError("Data setup was incorrect!")
 		}
 		
-		cell.fillData(available: available, active: active)
+		if indexPath.row == 1 {
+			let av = bTest ? rowOneAvailableA : rowOneAvailableB
+			cell.fillData(available: av, active: active)
+		} else {
+
+			cell.fillData(available: available, active: active)
+			
+		}
 		
 		cell.tagStateChanged = { [weak self] c, s, b in
 			guard let self = self,
@@ -96,6 +112,11 @@ class TesterViewController: UIViewController, UITableViewDelegate, UITableViewDa
 				self.activeFilters[thisCell.filterCategory]?.removeAll(where: {$0 == s})
 			}
 			self.tagStateChanged?(thisCell.filterCategory, s, b)
+			if thisCell.filterCategory == CameraFilter.SensorSize.rawValue &&
+				s == FilterSensorSize.Super35.rawValue {
+				self.bTest = b
+				self.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+			}
 		}
 		
 		return cell
